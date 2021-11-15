@@ -24,8 +24,11 @@
     "allowSyntheticDefaultImports": true,
     "types": ["react-spring", "jest"],
     "baseUrl": "src"
-    
   },
   "exclude": ["node_modules", "cypress"],
-  "include": ["./src/**/*.ts", "./src/**/*.tsx", "src/components/Confetti/index.js"]
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "src/components/Confetti/index.js"],
+  "declaration": true,
+  "emitDeclarationOnly": true,
+  // Ensure that Babel can safely transpile files in the TypeScript project
+  "isolatedModules": true
 }

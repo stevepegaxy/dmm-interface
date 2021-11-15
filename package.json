@@ -1,9 +1,12 @@
 {
-  "name": "@dmm/interface",
+  "version": "0.0.7",
+  "name": "@vutien/interfacesdk",
   "description": "DMM Exchange Interface",
   "homepage": ".",
-  "private": true,
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
     "@dynamic-amm/sdk": "^3.0.17",
     "@ethersproject/experimental": "^5.0.1",
     "@lingui/cli": "^3.10.2",
@@ -100,10 +103,17 @@
     "build": "yarn i18n && react-app-rewired build",
     "build-ropsten": "yarn i18n && env-cmd -f .env.ropsten react-app-rewired build",
     "build-production": "yarn i18n && env-cmd -f .env.production react-app-rewired build",
+    "build-sdk": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "eslintConfig": {
     "extends": "react-app",
     "ignorePatterns": [
@@ -125,6 +135,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@apollo/client": "^3.3.11",
+    "@babel/polyfill": "^7.12.1",
     "@lingui/detect-locale": "^3.10.4",
     "@lingui/react": "^3.10.2",
     "@rebass/forms": "^4.0.6",
