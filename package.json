@@ -1,5 +1,5 @@
 {
-  "version": "0.0.10",
+  "version": "0.0.13",
   "name": "@vutien/interfacesdk",
   "description": "DMM Exchange Interface",
   "homepage": ".",
@@ -103,17 +103,10 @@
     "build": "yarn i18n && react-app-rewired build",
     "build-ropsten": "yarn i18n && env-cmd -f .env.ropsten react-app-rewired build",
     "build-production": "yarn i18n && env-cmd -f .env.production react-app-rewired build",
-    "build-sdk": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
-  "main": "src/index",
-  "module": "src/index",
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "eslintConfig": {
     "extends": "react-app",
     "ignorePatterns": [
