@@ -67,7 +67,7 @@ const hideLoader = () => {
   }, 100)
 }
 
-const ReactApp = ({ hideLoader }: { hideLoader: () => void }) => {
+export const ReactApp = ({ hideLoader }: { hideLoader: () => void }) => {
   useEffect(hideLoader, [])
 
   return (
@@ -96,4 +96,4 @@ const ReactApp = ({ hideLoader }: { hideLoader: () => void }) => {
   )
 }
 
-ReactDOM.render(<ReactApp hideLoader={hideLoader} />, document.getElementById('root'))
+// ReactDOM.render(<ReactApp hideLoader={hideLoader} />, document.getElementById('root'))

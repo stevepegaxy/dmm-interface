@@ -1,5 +1,5 @@
 {
-  "version": "0.0.7",
+  "version": "0.0.10",
   "name": "@vutien/interfacesdk",
   "description": "DMM Exchange Interface",
   "homepage": ".",
@@ -108,8 +108,8 @@
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "src/index",
+  "module": "src/index",
   "files": [
     "dist",
     "README.md"
