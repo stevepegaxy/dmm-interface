@@ -86,7 +86,7 @@ const ReactApp = ({ hideLoader }: { hideLoader: () => void }) => {
                 <Updaters />
                 <ThemeProvider>
                   <ThemedGlobalStyle />
-                  <App />
+                  <div>Hello World</div>
                 </ThemeProvider>
               </Web3ProviderNetwork>
             </Web3ReactProvider>
@@ -97,7 +97,9 @@ const ReactApp = ({ hideLoader }: { hideLoader: () => void }) => {
   )
 }
 
-ReactDOM.render(<ReactApp hideLoader={hideLoader} />, document.getElementById('root'))
-if (process.env.REACT_APP_SERVICE_WORKER === 'true') {
-  serviceWorkerRegistration.register()
-}
+export default ReactApp
+
+// ReactDOM.render(<ReactApp hideLoader={hideLoader} />, document.getElementById('root'))
+// if (process.env.REACT_APP_SERVICE_WORKER === 'true') {
+//   serviceWorkerRegistration.register()
+// }

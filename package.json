@@ -2,7 +2,7 @@
   "name": "@dmm/interface",
   "description": "DMM Exchange Interface",
   "homepage": ".",
-  "private": true,
+  "main": "build/index.js",
   "devDependencies": {
     "@dynamic-amm/sdk": "^3.0.17",
     "@ethersproject/experimental": "^5.0.1",
@@ -94,6 +94,7 @@
     "trezor-connect": "8.1.15"
   },
   "scripts": {
+    "prepare": "rm -rf ./build && tsc && echo 'Finished building NPM package'",
     "i18n:extract": "lingui extract --clean",
     "i18n:compile": "lingui compile",
     "i18n": "yarn i18n:extract && yarn i18n:compile",
